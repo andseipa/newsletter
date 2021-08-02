@@ -35,7 +35,7 @@ a {
   --containWidth: min(100%, 40em);
 }
 
-header {
+.header {
   display: flex;
   position: absolute;
   width: 100%;
