@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+    background-color: var(--color_neutral-800);
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+  }
+a {
+  text-decoration: none;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: var(--color_neutral-100);
+    background-color: var(--color_accent);
+    font-weight: bold;
+    font-kerning: 1px;
+    padding: 1em 2em;
+    text-align: center;
+}
+
+:root {
+  --color_accent: hsl(14, 100%, 43%);
+  --color_neutral-100: hsl(0, 0%, 95%);
+  --color_neutral-400: hsl(0, 0%, 70%);
+  --color_neutral-600: hsl(0, 0%, 30%);
+  --color_neutral-800: hsl(0, 0%, 16%);
+  /* --containWidth: clamp(100%, 100%, 100%); */
+  --containWidth: min(100%, 40em);
+}
+
+header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  flex-direction: column;
+  /* background-color:  */
+}
+header .myContain__header {
+  /* height: auto; */
+  margin: auto;
+  width: var(--containWidth);
+  /* max-width: 40rem; */
+  /* background-color: violet; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  /* outline: 1px solid violet; */
+  z-index: 5;
+}
+
+header img.logo {
+  height: 3em;
+}
+header ul {
+  display: flex;
+  flex-flow: row;
+  flex-direction: row;
+  /* outline: 1px solid violet; */
+  /* width: 40%; */
+}
+header ul li {
+  list-style: none;
+  margin-left: 1.2em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-kerning: 1px;
+  /* outline: 1px solid violet; */
+}
+header ul li a {
+  color: var(--color_neutral-100);
+}
+header ul li a:hover {
+  color: var(--color_neutral-100);
+  font-weight: 700;
+}
+
+.myContain {
+  width: var(--containWidth);
+  background-color: var(--color_neutral-100);
+  margin: auto;
+  padding: 0;
+}
+
+section.hero {
+    height: 60vh;
+  max-height: 50vh;
+  margin-bottom: 5em;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url(img/stock/tre_trinn.jpg);
+  background-position: center;
+  background-size: cover;
+  color: var(--color_neutral-100);
+  z-index: 1;
+}
+section.hero::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 50%);
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+section.hero > * {
+  z-index: 5;
+  /* outline: 1px solid violet; */
+}
+
+section.hero .heroCard {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  /* width: clamp(80%, 500px, 50%); */
+  align-items: center;
+  justify-content: center;
+  margin-top: 15rem;
+  margin-bottom: -4rem;
+  padding: 1em;
+  background-color: var(--color_neutral-100);
+  color: var(--color_neutral-800);
+  box-shadow: 0 0 2.5em rgba(0, 0, 0, .2);
+}
+
+section.hero .heroCard h1 {
+    font-size: 2rem;
+    position: relative;
+    font-weight: 750;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: .2em 0 .5em 0;
+    box-shadow: var(--color_neutral-800);
+}
+
+section.hero .heroCard h1::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color_accent);
+    height: 3px;
+    width: 100%;
+    bottom: -.2em;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+}
+
+
+section.hero .heroCard h3 {
+    font-size: 1.4rem;
+}
+
+section.products {
+    background-color: var(--color_neutral-100);
+    padding: 1em;
+
+}
+
+.productWrapper {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+.productWrapper img {
+    width: 70%;
+    margin-bottom: 1em;
+}
+
+.cardContainer {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin-bottom: 4em;
+}
+.cardContainer img.productLogo {
+    margin-bottom: .2em;
+    padding: 0;
+    /* margin-bottom: 1em; */
+    /* height: 4em; */
+}
+.cardContainer h3 {
+    font-size: 1.8rem;
+    margin-bottom: .2em;
+}
+.cardContainer p {
+    margin-bottom: .5em;
+    text-justify:inter-character;
+}
+
+section.socialMedia {
+    padding: 4em;
+    background: url(./img/stock/igfb_story-2307-006.jpg);
+    background-position: 20% 50%;
+    background-size: cover;
+}
+
+footer {
+    padding: 2em;
+}
