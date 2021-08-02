@@ -6,23 +6,32 @@
   margin: 0;
 }
 body {
-    background-color: var(--color_neutral-800);
-    background-attachment: fixed;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
-  }
+  background-color: var(--color_neutral-800);
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
 a {
   text-decoration: none;
 }
 
+a.textLink {
+  color: var(--color_neutral-100);
+  position: absolute;
+  display: inline-block;
+  align-self: flex-end;
+  text-decoration: underline;
+
+}
+
 .btn {
-    text-transform: uppercase;
-    color: var(--color_neutral-100);
-    background-color: var(--color_accent);
-    font-weight: bold;
-    font-kerning: 1px;
-    padding: 1em 2em;
-    text-align: center;
+  text-transform: uppercase;
+  color: var(--color_neutral-100);
+  background-color: var(--color_accent);
+  font-weight: bold;
+  font-kerning: 1px;
+  padding: 1em 2em;
+  text-align: center;
 }
 
 :root {
@@ -42,7 +51,7 @@ a {
   flex-direction: column;
   /* background-color:  */
 }
-header .myContain__header {
+.header .myContain__header {
   /* height: auto; */
   margin: auto;
   width: var(--containWidth);
@@ -56,17 +65,17 @@ header .myContain__header {
   z-index: 5;
 }
 
-header img.logo {
+.header img.logo {
   height: 3em;
 }
-header ul {
+.header ul {
   display: flex;
   flex-flow: row;
   flex-direction: row;
   /* outline: 1px solid violet; */
   /* width: 40%; */
 }
-header ul li {
+.header ul li {
   list-style: none;
   margin-left: 1.2em;
   text-transform: uppercase;
@@ -75,10 +84,11 @@ header ul li {
   font-kerning: 1px;
   /* outline: 1px solid violet; */
 }
-header ul li a {
+.header ul li a {
   color: var(--color_neutral-100);
+  font-weight: 500;
 }
-header ul li a:hover {
+.header ul li a:hover {
   color: var(--color_neutral-100);
   font-weight: 700;
 }
@@ -91,7 +101,7 @@ header ul li a:hover {
 }
 
 section.hero {
-    height: 60vh;
+  height: 60vh;
   max-height: 50vh;
   margin-bottom: 5em;
   display: flex;
@@ -108,7 +118,12 @@ section.hero {
 section.hero::before {
   content: "";
   position: absolute;
-  background: linear-gradient(0deg, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 50%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.2) 20%,
+    rgba(0, 0, 0, 0) 50%
+  );
   z-index: 2;
   top: 0;
   right: 0;
@@ -124,6 +139,7 @@ section.hero .heroCard {
   display: flex;
   flex-direction: column;
   width: 80%;
+  position: relative;
   /* width: clamp(80%, 500px, 50%); */
   align-items: center;
   justify-content: center;
@@ -132,85 +148,132 @@ section.hero .heroCard {
   padding: 1em;
   background-color: var(--color_neutral-100);
   color: var(--color_neutral-800);
-  box-shadow: 0 0 2.5em rgba(0, 0, 0, .2);
+  box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.2);
+}
+section.hero .heroCard::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color_accent);
+  height: 7px;
+  width: 100%;
+  top: -7px;
+
 }
 
 section.hero .heroCard h1 {
-    font-size: 2rem;
-    position: relative;
-    font-weight: 750;
-    line-height: 1.2;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: .2em 0 .5em 0;
-    box-shadow: var(--color_neutral-800);
+  font-size: 2rem;
+  position: relative;
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0.2em 0 0.5em 0;
+  box-shadow: var(--color_neutral-800);
 }
 
-section.hero .heroCard h1::after {
-    content: '';
-    position: absolute;
-    background-color: var(--color_accent);
-    height: 3px;
-    width: 100%;
-    bottom: -.2em;
-    left: 0;
-    right: 0;
-    /* top: 0; */
-}
 
 
 section.hero .heroCard h3 {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 section.products {
-    background-color: var(--color_neutral-100);
-    padding: 1em;
-
+  background-color: var(--color_neutral-100);
+  padding: 1em;
+  columns: 1;
 }
 
 .productWrapper {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 .productWrapper img {
-    width: 70%;
-    margin-bottom: 1em;
+  width: 70%;
+  margin-bottom: 1em;
+
+}
+
+.productWrapper img.productImage {
+  filter: drop-shadow(0 0 10px hsla(0, 0%, 0%, 30%));
 }
 
 .cardContainer {
-    background-color: #FFF;
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-    margin-bottom: 4em;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-bottom: 2em;
 }
 .cardContainer img.productLogo {
-    margin-bottom: .2em;
-    padding: 0;
-    /* margin-bottom: 1em; */
-    /* height: 4em; */
+  margin-bottom: 0.2em;
+  padding: 0;
+  /* margin-bottom: 1em; */
+  /* height: 4em; */
 }
 .cardContainer h3 {
-    font-size: 1.8rem;
-    margin-bottom: .2em;
+  font-size: 1.8rem;
+  margin-bottom: 0.2em;
 }
 .cardContainer p {
-    margin-bottom: .5em;
-    text-justify:inter-character;
+  margin-bottom: 0.5em;
+  text-justify: inter-character;
+}
+.cardContainer .btn {
+  position: relative;
 }
 
 section.socialMedia {
-    padding: 4em;
-    background: url(./img/stock/igfb_story-2307-006.jpg);
-    background-position: 20% 50%;
-    background-size: cover;
+  display: flex;
+  height: 50vh;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0) 70%
+    ),
+    url(./img/stock/igfb_story-2307.jpg);
+  background-position: 0% 100%;
+  background-size: cover;
+}
+
+section.socialMedia h2 {
+  color: #fff;
+  position: relative;
+  width: 100%;
+  margin-bottom: .2em;
+}
+section.socialMedia h2::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  /* width: 90vw; */
+  height: 3px;
+  background-color: var(--color_accent);
+  left: -2rem;
+  bottom: -.1em;
+  overflow-x: hidden;
+}
+
+section.socialMedia p {
+  color: #fff;
+}
+
+section.socialMedia .link {
+  position: relative;
+  align-self: center;
+  margin-bottom: -1rem;
+  padding: .5em 1em;
 }
 
 footer {
-    padding: 2em;
+  padding: 2em;
+  height: 100vh;
 }
