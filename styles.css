@@ -42,7 +42,7 @@ a {
   flex-direction: column;
   /* background-color:  */
 }
-header .myContain__header {
+.header .myContain__header {
   /* height: auto; */
   margin: auto;
   width: var(--containWidth);
@@ -56,17 +56,17 @@ header .myContain__header {
   z-index: 5;
 }
 
-header img.logo {
+.header img.logo {
   height: 3em;
 }
-header ul {
+.header ul {
   display: flex;
   flex-flow: row;
   flex-direction: row;
   /* outline: 1px solid violet; */
   /* width: 40%; */
 }
-header ul li {
+.header ul li {
   list-style: none;
   margin-left: 1.2em;
   text-transform: uppercase;
@@ -75,10 +75,10 @@ header ul li {
   font-kerning: 1px;
   /* outline: 1px solid violet; */
 }
-header ul li a {
+.header ul li a {
   color: var(--color_neutral-100);
 }
-header ul li a:hover {
+.header ul li a:hover {
   color: var(--color_neutral-100);
   font-weight: 700;
 }
