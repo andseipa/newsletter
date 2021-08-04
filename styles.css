@@ -5,11 +5,13 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   background-color: var(--color_neutral-800);
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
+  font-size: .95rem;
 }
 a {
   text-decoration: none;
@@ -17,11 +19,22 @@ a {
 
 a.textLink {
   color: var(--color_neutral-100);
-  position: absolute;
+  /* position: absolute; */
   display: inline-block;
   align-self: flex-end;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+}
 
+.btn0 {
+  text-transform: uppercase;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color_neutral-600);
+  color: var(--color_neutral-100);
+  padding: 0.6em 1.2em;
+  font-weight: 600;
 }
 
 .btn {
@@ -39,7 +52,9 @@ a.textLink {
   --color_neutral-100: hsl(0, 0%, 95%);
   --color_neutral-400: hsl(0, 0%, 70%);
   --color_neutral-600: hsl(0, 0%, 30%);
+  --color_neutral-700: hsl(0, 0%, 23%);
   --color_neutral-800: hsl(0, 0%, 16%);
+  --color_neutral-900: hsl(0, 0%, 10%);
   /* --containWidth: clamp(100vw, 600px, 600px); */
   --containWidth: min(100%, 600px);
 }
@@ -60,13 +75,13 @@ a.textLink {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 1rem;
   /* outline: 1px solid violet; */
   z-index: 5;
 }
 
 .header img.logo {
-  height: 3em;
+  height: 3rem;
 }
 .header ul {
   display: flex;
@@ -77,9 +92,9 @@ a.textLink {
 }
 .header ul li {
   list-style: none;
-  margin-right: 1.2em;
+  margin-right: 1.2rem;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: .95rem;
   font-weight: 500;
   font-kerning: 1px;
   /* outline: 1px solid violet; */
@@ -103,15 +118,17 @@ a.textLink {
 section.hero {
   height: 60vh;
   max-height: 50vh;
-  margin-bottom: 5em;
+  margin-bottom: 5rem;
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   background-image: url(img/stock/tre_trinn.jpg);
-  background-position: center;
-  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size:cover;
+  background-repeat: no-repeat;
   color: var(--color_neutral-100);
   z-index: 1;
 }
@@ -157,10 +174,10 @@ section.hero .heroCard::before {
   height: 7px;
   width: 100%;
   top: -7px;
-
 }
 
 section.hero .heroCard h1 {
+  color: var(--color_neutral-900);
   font-size: 2rem;
   position: relative;
   font-weight: 750;
@@ -169,13 +186,17 @@ section.hero .heroCard h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0.2em 0 0.5em 0;
-  box-shadow: var(--color_neutral-800);
+  /* box-shadow: var(--color_neutral-800); */
 }
-
-
 
 section.hero .heroCard h3 {
   font-size: 1.4rem;
+}
+
+.grid {
+  display: grid;
+  /* max-width: 600px; */
+  grid-template-rows: 1fr 1fr;
 }
 
 section.products {
@@ -183,6 +204,12 @@ section.products {
   padding: 1em;
   columns: 1;
 }
+@media screen and (max-width: 515px) {
+  section.products {
+    padding: 0;
+  }
+}
+
 
 .productWrapper {
   display: flex;
@@ -190,10 +217,9 @@ section.products {
   /* justify-content: center; */
   align-items: center;
 }
-.productWrapper img {
+.productWrapper .productImage {
   width: 70%;
   margin-bottom: 1em;
-
 }
 
 .productWrapper img.productImage {
@@ -206,18 +232,38 @@ section.products {
   flex-direction: column;
   padding: 1em;
   margin-bottom: 2em;
+  position: relative;
 }
 .cardContainer img.productLogo {
-  margin-bottom: 0.2em;
-  padding: 0;
+  /* margin-bottom: 0.2em; */
+  /* padding: 0; */
+  height: 1.4em;
+  /* display: inline-block; */
+  /* width: 100%; */
+  /* position: absolute; */
+  /* right: 0;
+  top: 0; */
   /* margin-bottom: 1em; */
   /* height: 4em; */
 }
+.logoModelnameWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1em;
+}
+
 .cardContainer h3 {
+  color: var(--color_neutral-900);
   font-size: 1.8rem;
-  margin-bottom: 0.2em;
+  /* margin-bottom: 0.2em; */
+  line-height: .7;
+  letter-spacing: .4px;
 }
 .cardContainer p {
+  line-height: 1.5;
+  color: var(--color_neutral-700);
   margin-bottom: 0.5em;
   text-justify: inter-character;
 }
@@ -227,7 +273,7 @@ section.products {
 
 section.socialMedia {
   display: flex;
-  height: 50vh;
+  height: 20rem;
   flex-direction: column;
   position: relative;
   align-items: flex-start;
@@ -240,7 +286,7 @@ section.socialMedia {
       rgba(0, 0, 0, 0) 70%
     ),
     url(./img/stock/igfb_story-2307.jpg);
-  background-position: 0% 100%;
+  background-position: 0% 80%;
   background-size: cover;
 }
 
@@ -248,17 +294,17 @@ section.socialMedia h2 {
   color: #fff;
   position: relative;
   width: 100%;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
 }
 section.socialMedia h2::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   /* width: 90vw; */
   height: 3px;
   background-color: var(--color_accent);
   left: -2rem;
-  bottom: -.1em;
+  bottom: -0.1em;
   overflow-x: hidden;
 }
 
@@ -270,7 +316,7 @@ section.socialMedia .link {
   position: relative;
   align-self: center;
   margin-bottom: -1rem;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 
 footer {
