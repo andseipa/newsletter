@@ -40,8 +40,8 @@ a.textLink {
   --color_neutral-400: hsl(0, 0%, 70%);
   --color_neutral-600: hsl(0, 0%, 30%);
   --color_neutral-800: hsl(0, 0%, 16%);
-  /* --containWidth: clamp(100%, 100%, 100%); */
-  --containWidth: min(100%, 40em);
+  /* --containWidth: clamp(100vw, 600px, 600px); */
+  --containWidth: min(100%, 600px);
 }
 
 .header {
@@ -77,18 +77,18 @@ a.textLink {
 }
 .header ul li {
   list-style: none;
-  margin-left: 1.2em;
+  margin-right: 1.2em;
   text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 500;
   font-kerning: 1px;
   /* outline: 1px solid violet; */
 }
-.header ul li a {
+.header a {
   color: var(--color_neutral-100);
   font-weight: 500;
 }
-.header ul li a:hover {
+.header a:hover {
   color: var(--color_neutral-100);
   font-weight: 700;
 }
