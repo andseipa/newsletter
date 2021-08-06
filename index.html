@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Newsletter</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
@@ -34,27 +38,27 @@
       <section class="products">
         <div class="grid">
           <div class="productWrapper">
-            <img
-              src="./img/products/sony-xav-ax3005db.png"
-              class="productImage"
-              alt="Sony XAV-AX3005db.png"
-              srcset=""
-            />
+            <div class="card--blur sony">
+              <img
+                src="./img/products/sony-xav-ax3005db.png"
+                class="productImage"
+                alt="Sony XAV-AX3005db.png"
+                srcset=""
+              />
+            </div>
             <div class="cardContainer">
               <div class="logoModelnameWrapper">
-                <img
-                  src="./img/brands/sony.svg"
-                  class="productLogo"
-                  alt="Sony logo"
-                  srcset=""
-                />
-                <h3>XAV-AX3005DB</h3>
+                <div class="brandModel">
+                  <img
+                    src="./img/brands/sony.svg"
+                    class="productLogo"
+                    alt="Sony logo"
+                    srcset=""
+                  />
+                  <h3>XAV-AX3005DB</h3>
+                </div>
 
                 <p>
-                  Et fullverdig 2-DIN apparat, men på baksiden finner man at alt
-                  er kompakt konstruert i et 1-DIN chassis. Dette gjør at man
-                  mye lettere får plass til alle ledninger og adapter som kreves
-                  i mange biler.
                   Et fullverdig 2-DIN apparat, men på baksiden finner man at alt
                   er kompakt konstruert i et 1-DIN chassis. Dette gjør at man
                   mye lettere får plass til alle ledninger og adapter som kreves
@@ -64,7 +68,7 @@
               <a href="#" class="btn">Les mer</a>
             </div>
           </div>
-          <div class="productWrapper">
+          <!-- <div class="productWrapper">
             <img
               src="./img/products/pioneer-dmh-a240dab.png"
               class="productImage"
@@ -90,7 +94,7 @@
               </div>
               <a href="#" class="btn">Les mer</a>
             </div>
-          </div>
+          </div> -->
           <!-- <div class="productWrapper">
             <img
               src="./img/products/sony-xav-ax3005db.png"
@@ -153,9 +157,53 @@
           En Volvo 240 87-modell: Her byttet vi spiller, høyttalere, installerte
           sub og forsterker.
         </p>
-        <a href="#" class="textLink btn0">Les mer</a>
+        <a href="#" class="textLink">Les mer</a>
       </section>
-      <footer></footer>
+      <section class="bgBreak">
+        <div class="outlet">         <h3>Outletvarer</h3>
+        <p>
+          På hverdager legger vi daglig ut nye varer i outletavdelingen vår. Det lønner seg
+          å følge med! Kanskje kommer din neste basskasse fra outlet.
+        </p></div> </section>
+      <section class="products">
+        <div class="grid">
+          <div class="productWrapper">
+            <div class="card--blur continental">
+              <img
+                src="/img/products/continental_unit.png"
+                class="productImage"
+                alt="Sony XAV-AX3005db.png"
+                srcset=""
+              />
+            </div>
+        <div class="cardContainer">
+
+          <div class="logoModelnameWrapper">
+
+            <div class="brandModel">
+              <img
+                src="./img/brands/continental.svg"
+                class="productLogo"
+                alt="Sony logo"
+                srcset=""
+              />
+              <h3>CDD7428UB</h3>
+            </div>
+
+            <p>
+              Bluetooth® telefonforbindelse med AD2DP Audiostreaming sørger for sikker kommunikasjon og trådløs tilgang til musikken du har på telefonen din.
+            </p>
+          </div>
+          <a href="#" class="btn">Les mer</a>
+        </div>
+      
+      <footer>
+        <p class="followUs">Følg oss!</p>
+        <div>
+          <i class="fa fa-facebook" style="font-size: 48px"></i>
+          <i class="fa fa-instagram" style="font-size: 48px"></i>
+        </div>
+      </footer>
     </div>
     <!-- For liveserver inject fix -->
     <div style="height: 9999px"></div>

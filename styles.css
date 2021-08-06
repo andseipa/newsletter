@@ -11,7 +11,7 @@ body {
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
 }
 a {
   text-decoration: none;
@@ -19,10 +19,24 @@ a {
 
 a.textLink {
   color: var(--color_neutral-100);
+  margin-top: 1em;
   /* position: absolute; */
   display: inline-block;
   align-self: flex-end;
-  /* text-decoration: underline; */
+  text-decoration: underline;
+}
+
+h3 {
+  color: var(--color_neutral-800);
+  font-size: 2rem;
+  position: relative;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0.2em 0 0.5em 0;
+  /* box-shadow: var(--color_neutral-800); */
 }
 
 .btn0 {
@@ -50,6 +64,8 @@ a.textLink {
 :root {
   --color_accent: hsl(14, 100%, 43%);
   --color_neutral-100: hsl(0, 0%, 95%);
+  --color_neutral-200: hsl(0, 0%, 90%);
+  --color_neutral-300: hsl(0, 0%, 85%);
   --color_neutral-400: hsl(0, 0%, 70%);
   --color_neutral-600: hsl(0, 0%, 30%);
   --color_neutral-700: hsl(0, 0%, 23%);
@@ -110,7 +126,7 @@ a.textLink {
 
 .myContain {
   width: var(--containWidth);
-  background-color: var(--color_neutral-100);
+  background-color: var(--color_neutral-300);
   margin: auto;
   padding: 0;
 }
@@ -174,6 +190,12 @@ section.hero .heroCard::before {
   width: 100%;
   top: -7px;
 }
+@media only screen and (max-width: 400px) {
+  section.hero .heroCard {
+    width: 100%;
+  }
+  
+}
 
 section.hero .heroCard h1 {
   color: var(--color_neutral-900);
@@ -217,6 +239,7 @@ section.hero .heroCard h3 {
   display: grid;
   grid-template-rows: 2fr;
   justify-items: stretch;
+  /* border-radius: 10px; */
   /* align-items: ; */
   /* grid-template-rows: repeat(minmax(100px, 1fr), auto-fit); */
   /* flex-direction: column;
@@ -226,13 +249,37 @@ section.hero .heroCard h3 {
   /* height: 100%; */
 }
 .productWrapper .productImage {
-  width: 70%;
+  width: min(70%, 24em);
   margin-bottom: 1em;
 }
 
 .productWrapper img.productImage {
   filter: drop-shadow(0 0 10px hsla(0, 0%, 0%, 30%));
   justify-self: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.card--blur {
+  height: 15em;
+  display: flex;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  flex-direction: column;
+  align-items: center;
+  /* background-image: url(./img/stock/blur_bg0.jpg); */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.sony {
+  background-image: url(./img/stock/blur_bg0.jpg);
+}
+.continental {
+  /* background-image: url(./img/stock/continental_bg.jpg); */
+  background-image: url(./img/stock/continental_bg.jpg);
 }
 
 .cardContainer {
@@ -249,7 +296,8 @@ section.hero .heroCard h3 {
 .cardContainer img.productLogo {
   /* margin-bottom: 0.2em; */
   /* padding: 0; */
-  height: 1.5em;
+  height: 2em;
+  margin-bottom: .6em;
   /* display: inline-block; */
   /* width: 100%; */
   /* position: absolute; */
@@ -267,17 +315,25 @@ section.hero .heroCard h3 {
   /* align-items: flex-end; */
   /* margin-bottom: 1em; */
 }
-
+.brandModel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
 /* .logoModelnameWrapper:not(:last-child) {
   margin: 1em;
 } */
 
 .cardContainer h3 {
   color: var(--color_neutral-900);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   /* margin-bottom: 0.2em; */
   line-height: 1;
   letter-spacing: 0.4px;
+  display: inline-block;
+
+
 }
 .cardContainer p {
   line-height: 1.5;
@@ -288,6 +344,7 @@ section.hero .heroCard h3 {
 }
 .cardContainer .btn {
   position: relative;
+  /* border-radius: 0 0 10px 10px; */
 }
 
 section.socialMedia {
@@ -338,7 +395,35 @@ section.socialMedia .link {
   padding: 0.5em 1em;
 }
 
-footer {
+section.bgBreak {
   padding: 2em;
-  height: 100vh;
+  height: 10em;
+  background-image: url(img/stock/brs_ptrn.svg);
+  background-size: cover;
+}
+
+.outlet {
+
+}
+
+.bgBreak .cardContainer {
+padding: 1em 2em;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2em; */
+  height: 10em;
+}
+.followUs {
+  margin: 1em 0em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+footer i {
+  margin: 0em .5em;
 }
