@@ -140,7 +140,7 @@ section.hero {
   align-items: center;
   justify-content: flex-end;
   background-image: url(img/stock/tre_trinn.jpg);
-  /* background-attachment: fixed; */
+
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -164,7 +164,6 @@ section.hero::before {
 }
 section.hero > * {
   z-index: 5;
-  /* outline: 1px solid violet; */
 }
 
 section.hero .heroCard {
