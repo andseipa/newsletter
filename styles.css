@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: var(--color_neutral-800);
+  background-color: var(--color_neutral-100);
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
@@ -126,9 +126,10 @@ h3 {
 
 .myContain {
   width: var(--containWidth);
-  background-color: var(--color_neutral-300);
+  background-color: var(--color_neutral-200);
   margin: auto;
   padding: 0;
+  filter: drop-shadow(0 0 30px hsla(0, 0%, 0%, 0.25))
 }
 
 section.hero {
