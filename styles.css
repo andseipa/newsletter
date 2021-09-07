@@ -292,9 +292,11 @@ section.hero .heroCard h3 {
   flex-direction: column;
   justify-content: space-between;
   padding: 0em;
+  overflow: hidden;
   /* margin-bottom: 2em; */
   /* margin: .5em; */
   position: relative;
+  border-radius: 0 0 10px 10px;
 }
 .cardContainer img.productLogo {
   /* margin-bottom: 0.2em; */
